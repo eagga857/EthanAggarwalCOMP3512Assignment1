@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Assignment 1</title>
+    <link rel="stylesheet" href="css\style.css">
+    <script src="js\main.js"></script>
+    <script src="../echarts/dist/echarts.min.js"></script>
+</head>
+
+<body>
+    <main class="container">
+        <div class="header" id="box">
+            <h3>COMP 3512 Assign1</h3>
+            <label id="credits">Credits
+                <span id="hoverText">Ethan Aggarwal<br>COMP 3512<br>Google Maps<br>GithubPages<br>Echarts</span>
+            </label>
+        </div>
+        <div class="companyList" id="box">
+            <h3>List of Companies</h3>
+            <label>Filter:</label>
+            <input type="text" id="companySearch">
+            <button id="clear">Clear</button>
+            <img src="../images/4V0b.gif" id="loader1">
+            <ul id="listOfCompanies">
+
+            </ul>
+
+        </div>
+        <div class="companyInfo" id="box">
+            <h3>Company Information</h3>
+            <img id="logo">
+            <section class="textInfo">
+                <h3 id="infoSymbol"></h3>
+                <h3 id="infoName"></h3>
+                <h3 id="infoSector"></h3>
+                <h3 id="subindustry"></h3>
+                <h3 id="address"></h3>
+                <h3>Website: <a id="website" target="_blank"></a></h3>
+                <h3 id="exchange"></h3>
+                <h3 id="infoDescription"></h3>
+            </section>
+        </div>
+        <div id="map"></div>
+        <div class="stockData" id="box">
+            <h3>Stock Data</h3>
+            <button id="openCharts">View Charts</button>
+            <br>
+            <table id="dataTable">
+                <tr id="dataHeaders">
+                    <td id="date">Date</td>
+                    <td id="open">Open</td>
+                    <td id="close">Close</td>
+                    <td id="low">Low</td>
+                    <td id="high">High</td>
+                    <td id="volume">Volume</td>
+                </tr>
+            </table>
+        </div>
+        <div class="amm" id="box">
+            <table>
+                <tr id="average">
+                    <td>Average: </td>
+                </tr>
+                <tr id="min">
+                    <td>Min: </td>
+                </tr>
+                <tr id="max">
+                    <td>Max: </td>
+                </tr>
+            </table>
+
+        </div>
+        <div class="charts" id="box">
+            <h3>Charts</h3>
+
+            <div id="barChart" style="width: 800px; height:400px;"></div>
+            <div id="candleChart" style="width: 800px; height: 400px;"></div>
+            <div id="lineChart" style="width: 800px; height: 400px;"></div>
+
+        </div>
+        <div class="cns" id="box">
+            <h3 id="nameAndSymbol"></h3>
+            <button id="closeBtn">Close</button>
+            <p id="description"></p>
+            <button id="speak">Speak</button>
+
+        </div>
+        <div class="financials" id="box">
+            <h3>Financials</h3>
+            <section id="financialsInfo">
+                <label>Years</label>
+                <label>Revenue</label>
+                <label>Earnings</label>
+                <label>Assets</label>
+                <label>Liabilities</label>
+                <br>
+                <ul id="years"></ul>
+                <ul id="revenue"></ul>
+                <ul id="earnings"></ul>
+                <ul id="assets"></ul>
+                <ul id="liabilities"></ul>
+            </section>
+        </div>
+    </main>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCkddcTCf2j9XOnnnb1ltQQ79OSdjYlkm4&callback=initMap"></script>
+</body>
