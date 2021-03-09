@@ -145,7 +145,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             var selectedCompany = companies.find(company => e.target.textContent == company.name);
 
-            logo.setAttribute("src", "./logos/" + selectedCompany.symbol + ".svg");
+            logo.setAttribute("src", "logos/" + selectedCompany.symbol + ".svg");
             infoSymbol.textContent = "Symbol: " + selectedCompany.symbol;
             infoName.textContent = "Name: " + selectedCompany.name;
             sector.textContent = "Sector: " + selectedCompany.sector;
